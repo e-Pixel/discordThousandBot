@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 import random
-import rolling_dice # function (mine!)
+import rolling_dice # for $roll and $doubleroll commands
 
 client = commands.Bot(command_prefix = "$") # uses $ as prefix
 
@@ -58,5 +58,5 @@ async def logout(ctx):
     await ctx.send("Disconnect!!!")
     await client.close()
 
-token = None
+token = None # private 
 client.run(token)
